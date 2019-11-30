@@ -1,0 +1,62 @@
+<!--
+including header content which is common for all pages
+-->
+<%- include ../layouts/header.ejs %>	
+
+<% if (messages.error) { %>
+	<p style="color:red"><%- messages.error %></p>
+<% } %>
+
+<% if (messages.success) { %>
+	<p style="color:green"><%- messages.success %></p>
+<% } %>
+
+<form action="/users/add" method="post" name="form1">
+	<div class="form-group">
+			<label for="name">bus name</label>
+			<input type="text" name="name" class="form-control" id="name" value="<%= name %>" placeholder=""/>
+		</div>
+		<div class="form-group">
+				<label for="name">bus reg no</label>
+				<input type="text" name="usn" class="form-control" id="usn" value="<%= usn %>" placeholder=""/></td>
+		</tr>
+		<tr>
+			<br>
+		</tr>
+		<tr> 
+			<td>person mobileno/td>
+			<td><input type="number" name="age" class="form-control" id="age" value="<%= age %>" placeholder="" /></td>
+		</tr>
+		<tr>
+			<br>
+		</tr>
+		<tr> 
+			<td>email1</td>
+			<td><input type="mail" name="email" class="form-control" id="email" value="<%= email %>" placeholder=""/></td>
+		</tr>
+		<tr>
+			<br>
+		</tr>
+		
+		<tr>
+			<br>
+		</tr>
+		
+		<tr>
+			<br>
+		</tr>
+		
+<tr>
+	<br>
+</tr>
+		<tr> 
+			<td><br></td>
+			<td><input type="submit" name="Submit" value="Register Me" /></td>
+		</tr>
+	</table>
+</form>
+
+<!--
+including footer content which is common for all pages
+-->
+<%- include ../layouts/footer.ejs %>
